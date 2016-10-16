@@ -1,0 +1,28 @@
+extends:
+  - standard
+  - eslint:recommended
+rules:
+  no-multiple-empty-lines: [error, {"max": 3, "maxEOF": 0}]
+  no-trailing-spaces: error
+  comma-dangle: ['error', 'always-multiline']
+  no-unused-vars: [error, {
+    vars: 'all',
+    varsIgnorePattern: '^_',
+    args: 'all',
+    argsIgnorePattern: '^_'
+  }]
+  no-use-before-define: [error, {functions: false, classes: false}]
+
+  # Standard overides
+  semi: [error, never]
+  promise/param-names: off
+
+  # ES6
+  no-var: error
+  arrow-parens: error
+  no-useless-rename: error
+  prefer-rest-params: error
+  prefer-spread: error
+  generator-star-spacing: ['error', {before: false, after: true}]
+  yield-star-spacing: ['error', {before: false, after: true}]
+  require-yield: off

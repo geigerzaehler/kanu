@@ -1,0 +1,10 @@
+<script src="./system.js"></script>
+<script>
+    // set our baseURL reference path
+  SystemJS.config({
+    baseURL: '/js'
+  });
+
+  // loads /js/main.js
+  SystemJS.import('main.js', '__local__');
+</script>

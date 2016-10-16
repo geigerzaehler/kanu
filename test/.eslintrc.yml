@@ -1,0 +1,11 @@
+globals:
+  describe: false
+  describeEach: false
+  beforeEach: false
+  afterEach: false
+  subject: false
+  setup: false
+  it: false
+  test: false
+rules:
+  padded-blocks: off
