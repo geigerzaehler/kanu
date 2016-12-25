@@ -11,6 +11,7 @@ export default function fromMocha (name) {
     return {
       started () {
         runner = new EventEmitter()
+        /* eslint no-new: off */
         new Mocha[name](runner)
         runner.emit('start')
       },

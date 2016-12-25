@@ -2,6 +2,7 @@ import * as Suite from './suite'
 import * as assert from 'assert'
 
 export default function createContext () {
+  /* eslint object-property-newline: off */
   const dsl = {
     describe, fdescribe, xdescribe,
     describeEach, fdescribeEach, xdescribeEach,
@@ -103,7 +104,6 @@ export default function createContext () {
       }
     }, opts)
   }
-
 }
 
 function addTest (suite, params) {

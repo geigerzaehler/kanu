@@ -1,6 +1,6 @@
 extends:
-  - standard
   - eslint:recommended
+  - standard
 rules:
   no-multiple-empty-lines: [error, {"max": 3, "maxEOF": 0}]
   no-trailing-spaces: error

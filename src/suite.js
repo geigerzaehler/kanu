@@ -10,7 +10,10 @@
 export function make (title, opts) {
   const {pending, focused, hide} = opts || {}
   return {
-    title, pending, focused, hide,
+    title,
+    pending,
+    focused,
+    hide,
     suites: [],
     specs: [],
     befores: [],
@@ -62,8 +65,8 @@ function setTitleAndId (suite) {
 
 function markPending (suite, parentPending = false) {
   suite.pending = parentPending || suite.pending
-  suite.specs.forEach((s) => s.pending = s.pending || suite.pending)
-  suite.suites.forEach((s) => markPending(s, suite.pending))
+  suite.specs.forEach((s) => { s.pending = s.pending || suite.pending })
+  suite.suites.forEach((s) => { markPending(s, suite.pending) })
 }
 
 function filter (suite, matchSpec, matchSuite) {

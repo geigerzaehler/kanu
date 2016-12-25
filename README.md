@@ -9,7 +9,7 @@ Error Codes
 -----------
 
 * `0` All tests passed
-* `1` Some tests failued
+* `1` Some tests failed
 * `2` Invalid command line options
 
 Async

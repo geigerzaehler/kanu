@@ -104,18 +104,18 @@ function* runSpec (spec, hooks, reporter) {
       })
     })
 
-  const result = failures.length ?
-    Result.Failure(spec, failures) :
-    Result.Success(spec)
+  const result = failures.length
+    ? Result.Failure(spec, failures)
+    : Result.Success(spec)
 
   reporter.specResult(result)
   return result
 }
 
 function addSuiteHooks (suite, hooks) {
-  const subjects = suite.subject ?
-    hooks.subjects.push(suite.subject) :
-    hooks.subjects
+  const subjects = suite.subject
+    ? hooks.subjects.push(suite.subject)
+    : hooks.subjects
   return {
     before: hooks.before.concat(List(suite.befores)),
     after: hooks.after.concat(List(suite.afters)),

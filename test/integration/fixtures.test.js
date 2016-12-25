@@ -3,6 +3,11 @@ import * as P from 'path'
 import * as assert from 'support/assert'
 import * as FS from 'fs'
 
+/**
+ * Run CLI against fixtures and compare JSON result against prerecorded results
+ *
+ * Run tests with the RECORD_RESULTS environment variable to write results.
+ */
 describe('fixtures', function () {
   [
     'main',
@@ -38,7 +43,10 @@ function* assertResults (cmd, resultFile) {
   }
 }
 
-function testCmd(files) {
+/**
+ * Returns the test command to run for the given fixture test files
+ */
+function testCmd (files) {
   const paths = files.map((f) => {
     return `"test/fixtures/${f}"`
   }).join(' ')
@@ -46,6 +54,7 @@ function testCmd(files) {
     --reporter json
     ${paths}`.replace(/[\s\n]+/g, ' ')
 }
+
 
 function readJSON (path) {
   return new Promise((resolve, reject) => {
@@ -60,6 +69,7 @@ function readJSON (path) {
     return JSON.parse(contents)
   })
 }
+
 
 function writeJSON (path, obj) {
   return new Promise((resolve, reject) => {
