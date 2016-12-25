@@ -27,6 +27,9 @@ describe('fixtures', function () {
 })
 
 
+/**
+ * Runs the given command and compares its output with the given result file.
+ */
 // TODO move results into fixture files comments and extract them
 function* assertResults (cmd, resultFile) {
   const {stdout, stderr, code} = yield pexec(cmd)
@@ -42,6 +45,7 @@ function* assertResults (cmd, resultFile) {
     assert.equal({stdout: parsedStdout, code}, recorded)
   }
 }
+
 
 /**
  * Returns the test command to run for the given fixture test files

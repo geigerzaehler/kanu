@@ -32,7 +32,7 @@
     ],
     "errors": [
       {
-        "file": "/home/thomas/code/kanu/test/fixtures/corrupt.js",
+        "file": "test/fixtures/corrupt.js",
         "error": "kaputt"
       }
     ]

@@ -27,7 +27,7 @@ export function fromPaths (paths, extensions, requireLocal) {
         try {
           return getFiles(P.resolve(p), match)
         } catch (e) {
-          errors.push({error: e, file: p})
+          errors.push({error: e, file: P.relative('', p)})
           return List()
         }
       })
@@ -38,7 +38,7 @@ export function fromPaths (paths, extensions, requireLocal) {
           requireLocal(file)
           loaded.push(file)
         } catch (error) {
-          errors.push({file, error})
+          errors.push({file: P.relative('', file), error})
         }
       })
       unexpose()
