@@ -53,3 +53,6 @@ Roadmap
 -------
 
 - [ ] Keyboard controls for watcher.Like 'r' for automatic rerun
+- [ ] Browser loader based on [SystemJS][]
+
+[SystemJS]: https://github.com/systemjs/systemjs

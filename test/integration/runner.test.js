@@ -5,6 +5,14 @@ import {Result} from 'kanu/result'
 import * as assert from 'support/assert'
 import * as sinon from 'sinon'
 
+/**
+ * Test the test runner from 'kanu/runner'
+ *
+ * - Stubs the file loader
+ * - Uses the 'dsl' object provided by the runer
+ * - Makes assertions on the runner results
+ */
+
 function run (test, options) {
   return createRunner((dsl) => {
     return Promise.resolve(

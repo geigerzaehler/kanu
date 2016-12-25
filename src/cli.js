@@ -79,7 +79,7 @@ function parseArgs (argv) {
     .usage('kanu [OPTIONS] FILES...')
     .options({
       watch: {
-        description: 'Watch the given directories for changes',
+        description: 'Comma separated list of directories to watch',
         type: 'string',
       },
       require: {
