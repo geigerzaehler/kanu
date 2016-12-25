@@ -1,6 +1,8 @@
 Kanu
 ====
 
+[![Build Status](https://travis-ci.org/geigerzaehler/kanu.svg?branch=master)](https://travis-ci.org/geigerzaehler/kanu)
+
 _Powerful single-purpose test runner_
 
 Error Codes
